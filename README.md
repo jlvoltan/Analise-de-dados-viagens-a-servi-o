@@ -16,7 +16,7 @@ Podemos destacar as seguintes etapas no projeto:
 
 
 **3 - Transformação dos dados obtidos**
-- COrreção das datas que apareciam como factor
+- Correção das datas que apareciam como factor
 
 **4 - Exploração** 
 
