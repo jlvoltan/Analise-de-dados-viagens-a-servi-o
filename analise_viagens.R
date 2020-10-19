@@ -62,4 +62,38 @@ posicao_maior_valor <- which(passagens$Valor.da.passagem==maior_valor_rodoviaria
 passagens[posicao_maior_valor,]
 
 
+#2º Quais os países com média de passagem mais caras (destino)?
 
+passagens2 <- group_by(passagens, País...Destino.ida)
+
+summarise(passagens2, media_gasta= mean(Valor.da.passagem,na.rm=TRUE)) %>% arrange(desc(media_gasta))
+
+#3º Quais os países mais visitados?
+
+count(passagens,País...Destino.ida) %>%
+  arrange(desc(n))
+
+#4º Quais os meios de transporte mais utilizados?
+
+count(passagens,Meio.de.transporte) %>%
+  arrange(desc(n))
+
+#5º Em qual dia se comprou mais passagens no ano?
+
+count(passagens,Data.compra) %>%
+  arrange(desc(n))
+#[1]    2020-03-06 2116
+
+#6º Em qual mês se comprou mais passagens no ano?
+
+meses_compras <- count(passagens,Data.compra.formatada) %>%
+  arrange(desc(n))
+meses_compras 
+#[1]    2020-02 21774
+
+library(ggplot2)
+ggplot(meses_compras,aes(y=Data.compra.formatada, x= n) )+
+  geom_bar(stat = "identity",fill = "tomato")+
+  theme_classic() +
+  xlab("Quantidade") + 
+  ylab("Meses do ano") 
