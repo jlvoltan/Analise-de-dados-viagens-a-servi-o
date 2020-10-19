@@ -21,3 +21,18 @@ Podemos destacar as seguintes etapas no projeto:
 **4 - Exploração** 
 
 **5 - Visualização**
+
+
+## Buscou-se responder as seguintes perguntas:
+
+- 1º Qual a passagem rodoviária mais cara?
+
+- 2º Quais os países com média de passagem mais caras (destino)?
+
+- 3º Quais os países mais visitados?
+
+- 4º Quais os meios de transporte mais utilizados?
+
+- 5º Em qual dia se comprou mais passagens no ano?
+
+- 6º Em qual mês se comprou mais passagens no ano?
